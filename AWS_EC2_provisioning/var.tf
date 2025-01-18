@@ -13,7 +13,7 @@ variable "instance_count" {
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t2.micro"
+  default     = "t3.xlarge"
 }
 
 variable "ami_id" {
@@ -77,5 +77,21 @@ variable "root_volume_size" {
 
 variable "root_volume_type" {
   description = "Root volume type"
+  type        =  string
   default     = "gp3"
+}
+
+variable "access_key" {
+  description = "aws access key"
+  type = string
+}
+variable "secret_key" {
+  description = "aws secret key"
+  type = string
+}
+
+variable "availability_zone" {
+  description = "availability zone(a, b, c, or d)"
+  type        = string
+  default     = "a"
 }
